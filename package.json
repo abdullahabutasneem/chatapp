@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm -r --workspace-root=false build",
+    "dev": "pnpm -r --workspace-root=false dev",
+    "lint": "pnpm -r --workspace-root=false lint",
+    "format": "pnpm -r --workspace-root=false format",
+    "test": "pnpm -r --workspace-root=false test"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +20,15 @@
       "onFail": "download"
     }
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.7.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.3",
+    "@typescript-eslint/parser": "^8.59.3",
+    "eslint": "^10.3.0",
+    "prettier": "^3.8.3",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
 }
